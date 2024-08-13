@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { FormField } from '~/components/ui/form'
-import { useAppI18n } from '~/composable/use-app-i18n'
 import * as z from "zod"
 import { toTypedSchema } from '@vee-validate/zod'
 import { useForm } from 'vee-validate'
