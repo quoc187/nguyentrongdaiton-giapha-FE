@@ -3,7 +3,7 @@ import { toTypedSchema } from "@vee-validate/zod"
 import { useForm } from "vee-validate"
 import { userInputSchema, type UserInput } from "~/interfaces/user/input"
 import * as z from "zod"
-import { ref, useAppI18n } from "#imports"
+import { ref, toRaw, useAppI18n } from "#imports"
 import { FormField, FormFieldArray } from "~/components/ui/form"
 import VStack from "~/components/ui/v-stack.vue"
 import { Button } from "~/components/ui/button"
@@ -20,8 +20,7 @@ type Props = {
 
 const props = defineProps<Props>()
 const emit = defineEmits<{
-  (e: "submit", data: Family): void
-  (e: "cancel"): void
+  (e: "submit" | "cancel", data: Family): void
 }>()
 
 const schema = z.object({
@@ -93,7 +92,7 @@ const onSubmit = form.handleSubmit((data) => emit("submit", data), console.log)
           </VStack>
         </FormField>
 
-        <FormFieldArray v-slot="{ fields, push, remove }" name="field">
+        <FormFieldArray v-slot="{ fields, push, remove }" name="children">
           <VStack class="gap-2">
             <p class="text-h4 mt-1">
               {{ t("children") }}
@@ -126,7 +125,7 @@ const onSubmit = form.handleSubmit((data) => emit("submit", data), console.log)
           variant="outline"
           size="lg"
           class="text-lg w-full"
-          @click="$emit('cancel')"
+          @click="$emit('cancel', toRaw(form.values) as Family)"
         >
           {{ t("back") }}
         </Button>

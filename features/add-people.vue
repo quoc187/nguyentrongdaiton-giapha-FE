@@ -18,7 +18,9 @@ const onFamilySubmit = (data: Family) => {
   alert("ADDED BOTH")
 }
 
-const onFamilyBack = () => {
+const onFamilyBack = (data: Family) => {
+  console.log("DD", data)
+  store.setFamily(data.wife, data.children)
   store.switchStep(AddPeopleStep.Me)
 }
 </script>
