@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  imports: {
+    autoImport: false,
+  },
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   // ssr: false,
@@ -22,6 +25,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
     "@vee-validate/nuxt",
+    "@pinia/nuxt",
   ],
   i18n: {
     strategy: "no_prefix",

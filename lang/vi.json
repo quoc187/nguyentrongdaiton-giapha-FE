@@ -18,5 +18,7 @@
   "children": "Con cái",
   "add_child": "Thêm con cái",
   "remove": "Xoá",
-  "please_enter": "Vui lòng nhập {what}!"
+  "please_enter": "Vui lòng nhập {what}!",
+  "please_enter.full_name": "Vui lòng nhập họ và tên!",
+  "add_wife": "Thêm vợ"
 }

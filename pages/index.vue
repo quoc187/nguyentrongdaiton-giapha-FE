@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import AddMe from "~/features/add/add-me.vue"
+import { useHeadSafe } from "#imports"
+import AddPeople from "~/features/add-people.vue"
 
-useHead({
+useHeadSafe({
   title: "Gia pha nguyen trong",
 })
 </script>
 
 <template>
-  <AddMe />
+  <AddPeople />
 </template>

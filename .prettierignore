@@ -1,5 +1,7 @@
 .nuxt
 .output
+dist
+assets
 **/.git
 **/.svn
 **/.hg
