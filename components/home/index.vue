@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { useAppI18n } from '~/composables/use-app-i18n'
+import { useAppI18n } from "~/composables/use-app-i18n"
 
 const { t } = useAppI18n()
-
 </script>
 
 <template>

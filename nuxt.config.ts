@@ -2,10 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  ssr: false,
+  // ssr: false,
   vite: {
     optimizeDeps: {
-      exclude: ['vee-validate']
+      exclude: ["vee-validate"],
     },
   },
   typescript: {
@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     "nuxt-typed-router",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
-    '@vee-validate/nuxt',
+    "@vee-validate/nuxt",
   ],
   i18n: {
     strategy: "no_prefix",
@@ -41,7 +41,7 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     config: {
-      content: ["./components/**/*.vue", "./features/**/*.vue"]
-    }
-  }
+      content: ["./components/**/*.vue", "./features/**/*.vue"],
+    },
+  },
 })

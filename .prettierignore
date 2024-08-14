@@ -1,0 +1,11 @@
+.nuxt
+.output
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+.wrangler
+package.json
+pnpm-lock.yaml
+README.md
+tailwind.config.js

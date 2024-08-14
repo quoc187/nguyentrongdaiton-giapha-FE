@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme")
 const animate = require("tailwindcss-animate")
 
 /** @type {import('tailwindcss').Config} */
@@ -6,7 +6,7 @@ module.exports = {
   darkMode: ["class"],
   safelist: ["dark"],
   prefix: "",
-  content: ['**/*.{vue}'],
+  content: ["**/*.{vue}"],
 
   theme: {
     fontFamily: {
@@ -20,31 +20,46 @@ module.exports = {
       },
     },
     fontSize: {
-      h1: ["3rem", {
-        fontWeight: "800",
-        letterSpacing: "-0.012em",
-        lineHeight: "3rem",
-      }],
-      h2: ["1.875rem", {
-        fontWeight: "700",
-        letterSpacing: "-0.0075em",
-        lineHeight: "2.25rem",
-      }],
-      h3: ["1.5rem", {
-        fontWeight: "600",
-        letterSpacing: "-0.006em",
-        lineHeight: "2rem",
-      }],
-      h4: ["1.25rem", {
-        fontWeight: "600",
-        letterSpacing: "-0.005em",
-        lineHeight: "1.75rem",
-      }],
-      large: ["1.125rem", {
-        fontWeight: 600,
-        letterSpacing: 0,
-        lineHeight: "1.75rem",
-      }],
+      h1: [
+        "3rem",
+        {
+          fontWeight: "800",
+          letterSpacing: "-0.012em",
+          lineHeight: "3rem",
+        },
+      ],
+      h2: [
+        "1.875rem",
+        {
+          fontWeight: "700",
+          letterSpacing: "-0.0075em",
+          lineHeight: "2.25rem",
+        },
+      ],
+      h3: [
+        "1.5rem",
+        {
+          fontWeight: "600",
+          letterSpacing: "-0.006em",
+          lineHeight: "2rem",
+        },
+      ],
+      h4: [
+        "1.25rem",
+        {
+          fontWeight: "600",
+          letterSpacing: "-0.005em",
+          lineHeight: "1.75rem",
+        },
+      ],
+      large: [
+        "1.125rem",
+        {
+          fontWeight: 600,
+          letterSpacing: 0,
+          lineHeight: "1.75rem",
+        },
+      ],
       ...defaultTheme.fontSize,
     },
     extend: {
